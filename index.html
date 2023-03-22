@@ -1,0 +1,44 @@
+<!--
+  Ejercicio de https://developer.mozilla.org/es/docs/Web/JavaScript
+  Quiero que crees un sencillo juego del tipo "adivina el número". 
+  Se debe elegir un número aleatorio entre 1 y 100, luego desafiar 
+  al jugador a adivinar el número en 10 intentos. Después de cada 
+  intento, debería decirle al jugador si ha acertado o no — y si 
+  está equivocado, debería decirle si se ha quedado corto o se ha 
+  pasado. También debería decir los números que ya se probaron 
+  anteriormente. El juego terminará una vez que el jugador acierte 
+  o cuando se acaben los intentos. Cuando el juego termina, se le 
+  debe dar al jugador la opción de volver a jugar.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Performance-->
+  <link rel="preload" href="css/estilo.css" as="style" >
+  <!--Estilo-->
+  <link rel="stylesheet" href="css/estilo.css" type="text/css" >
+  <title>Adivina el número</title>
+</head>
+<body>
+  <h1>Juego adivina el número</h1>
+
+  <p>Hemos seleccionado un número aleatorio entre 1 y 100. Fíjate si lo puedes adivinar en 10 turnos o menos. Vamos a decirte si tu número es más alto o más bajo.</p>
+
+  <div class="form">
+    <label for="guessField">Adivina el numero: </label>
+    <input type="number" min="1" max="100" required id="guessField" class="guessField">
+    <input type="submit" value="Enviar respuesta" class="guessSubmit">
+  </div>
+
+  <div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
